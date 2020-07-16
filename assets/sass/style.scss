@@ -1,0 +1,35 @@
+@import "libs/reset.scss";
+
+body {
+    background: rgb(233, 229, 229);
+    margin: 20vh 20vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        text-transform: uppercase;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#box {
+    position: relative;
+
+    &::before {
+        content: "this is a slide show";
+        position: absolute;
+        top: 21%;
+        left: -14em;
+        transform: rotate(270deg);
+        transform-origin: right top;
+    }
+}
